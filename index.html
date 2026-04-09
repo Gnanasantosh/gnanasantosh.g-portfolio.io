@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G. Gnanasantosh Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1 id="name"></h1>
+    <p id="phone"></p>
+    <a id="github" target="_blank">GitHub Profile</a>
+</header>
+
+<section>
+    <h2>Profile</h2>
+    <p id="profile"></p>
+</section>
+
+<section>
+    <h2>Career Objective</h2>
+    <p id="objective"></p>
+</section>
+
+<section>
+    <h2>Education</h2>
+    <ul id="education"></ul>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <ul id="skills"></ul>
+</section>
+
+<section>
+    <h2>Personal Details</h2>
+    <p id="age"></p>
+    <p id="languages"></p>
+</section>
+
+<footer>
+    <p>© 2026 Gnanasantosh</p>
+</footer>
+
+<script>
+fetch('data.json')
+.then(response => response.json())
+.then(data => {
+    document.getElementById('name').innerText = data.name;
+    document.getElementById('phone').innerText = data.phone;
+    document.getElementById('github').href = data.github;
+
+    document.getElementById('profile').innerText = data.profile;
+    document.getElementById('objective').innerText = data.objective;
+
+    document.getElementById('age').innerText = "Age: " + data.age;
+    document.getElementById('languages').innerText = "Languages: " + data.languages;
+
+    let eduList = document.getElementById('education');
+    data.education.forEach(e => {
+        let li = document.createElement('li');
+        li.innerText = e;
+        eduList.appendChild(li);
+    });
+
+    let skillList = document.getElementById('skills');
+    data.skills.forEach(s => {
+        let li = document.createElement('li');
+        li.innerText = s;
+        skillList.appendChild(li);
+    });
+});
+</script>
+
+</body>
+</html>
