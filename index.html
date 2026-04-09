@@ -3,76 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G. Gnanasantosh Portfolio</title>
+    <title>G. Gnanasantosh | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
-    <h1 id="name"></h1>
-    <p id="phone"></p>
-    <a id="github" target="_blank">GitHub Profile</a>
+    <h1>G. GNANASANTOSH</h1>
+    <p>Phone: 9500264305</p>
+    <a href="https://github.com/Gnanasantosh/gnanasantosh.g-portfolio.io" target="_blank">
+        GitHub Profile
+    </a>
 </header>
 
 <section>
     <h2>Profile</h2>
-    <p id="profile"></p>
+    <p>
+        Motivated undergraduate student with foundational skills in Python, R, PostgreSQL, HTML5, and CSS3. 
+        Interested in developing practical solutions through programming and data-oriented technologies. 
+        Seeking opportunities to apply technical knowledge in real-world environments and strengthen professional experience.
+    </p>
 </section>
 
 <section>
     <h2>Career Objective</h2>
-    <p id="objective"></p>
+    <p>
+        To obtain an opportunity that allows me to apply my programming and database skills in a growth-oriented 
+        environment while continuously improving my technical knowledge and contributing effectively to organizational goals.
+    </p>
 </section>
 
 <section>
     <h2>Education</h2>
-    <ul id="education"></ul>
+    <ul>
+        <li>Anna University Regional Campus, Coimbatore – Undergraduate Student</li>
+        <li>PMG Matric Higher Secondary School – Higher Secondary Education Completed</li>
+    </ul>
 </section>
 
 <section>
     <h2>Technical Skills</h2>
-    <ul id="skills"></ul>
+    <ul>
+        <li>Python Programming</li>
+        <li>R Programming</li>
+        <li>PostgreSQL</li>
+        <li>HTML5</li>
+        <li>CSS3</li>
+    </ul>
 </section>
 
 <section>
     <h2>Personal Details</h2>
-    <p id="age"></p>
-    <p id="languages"></p>
+    <p>Age: 19</p>
+    <p>Languages: English, Tamil</p>
 </section>
 
 <footer>
-    <p>© 2026 Gnanasantosh</p>
+    <p>© 2026 G. Gnanasantosh</p>
 </footer>
-
-<script>
-fetch('data.json')
-.then(response => response.json())
-.then(data => {
-    document.getElementById('name').innerText = data.name;
-    document.getElementById('phone').innerText = data.phone;
-    document.getElementById('github').href = data.github;
-
-    document.getElementById('profile').innerText = data.profile;
-    document.getElementById('objective').innerText = data.objective;
-
-    document.getElementById('age').innerText = "Age: " + data.age;
-    document.getElementById('languages').innerText = "Languages: " + data.languages;
-
-    let eduList = document.getElementById('education');
-    data.education.forEach(e => {
-        let li = document.createElement('li');
-        li.innerText = e;
-        eduList.appendChild(li);
-    });
-
-    let skillList = document.getElementById('skills');
-    data.skills.forEach(s => {
-        let li = document.createElement('li');
-        li.innerText = s;
-        skillList.appendChild(li);
-    });
-});
-</script>
 
 </body>
 </html>
