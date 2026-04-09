@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #ffffff;
+    color: #000000;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px;
+    border-bottom: 2px solid black;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+header a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 6px 12px;
+    transition: 0.3s;
+}
+
+header a:hover {
+    background: black;
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+/* Lists */
+ul {
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
